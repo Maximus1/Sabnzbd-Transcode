@@ -155,7 +155,7 @@ if ($result -eq "OK") {
             $nfoContent = Get-Content -Path $nfoFile -Raw
 
             # Check if the NFO file contains the genre
-            if (Get-AnimationGenre -nfoContent $nfoContent) {
+            if (Get-Genre -nfoContent $nfoContent) {
             Write-Output "Genre erkannt als Anime/Animation/Zeichentrick. Starte FFmpeg Konvertierung mit -tune animation..."
             $tuneAnimation = "-tune animation"
             } else {
